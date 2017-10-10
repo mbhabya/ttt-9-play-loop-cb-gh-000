@@ -9,5 +9,6 @@ display_board(board)
 
 turn(board)
 
+#play
 
 play(board)
