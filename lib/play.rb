@@ -43,4 +43,3 @@ def play(board)
     count += 1
   end
 end
-
