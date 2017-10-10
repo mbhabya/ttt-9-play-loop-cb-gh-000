@@ -1,9 +1,13 @@
-describe './bin/play' do
-  it 'evokes #play passing it `board` as an argument' do
-    allow($stdout).to receive(:puts)
+require_relative '../lib/play'
 
-    expect(self).to receive(:play).with(kind_of(Array))
+describe '#play' do
+  it 'calls turn nine times' do
+    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-    run_file("./bin/play")
+    allow(self).to receive(:gets).and_return('1','2','3','4','5','6','7','8','9')
+
+    play(board)
+
+    expect(board).to eq(["X","X","X","X","X","X","X","X","X",])
   end
 end
