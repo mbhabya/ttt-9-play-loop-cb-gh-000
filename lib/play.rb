@@ -31,8 +31,15 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
-    turn(board)
+    puts turn(board)
   end
 end
 
+def play(board)
+  count = 1
+  until count == 10
+       turn(board)
+       count += 1
+  end
+end
 # Define your play method below
